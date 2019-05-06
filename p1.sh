@@ -39,11 +39,6 @@ az group deployment create \
 --resource-group doradoe1_asp_Linux_centralus \
 --template-uri https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-webapp-linux-managed-mysql/azuredeploy.json
 
-##Update the app service plan (Sets a defaul for the servers):
-az appservice plan update \
---name $appname \
---number-of-workers $workers \
---resource-group doradoe1_asp_Linux_centralus
 
 ##Create a scale set (allows for redundancy):
 az vmss create \
